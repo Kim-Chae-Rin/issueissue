@@ -1,21 +1,87 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8"/>
-	<title>Kakao 지도 시작하기</title>
-</head>
-<body>
-	<div id="map" style="width:500px;height:400px;"></div>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="colorlib.com">
+    <title>Main Page</title>
+    <script src="https://kit.fontawesome.com/97f7d9edcc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
 
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7deacb2fc0e2e115f8223cc0a8fb00a6"></script>
-	<script>
-		var container = document.getElementById('map');
-		var options = {
-			center: new kakao.maps.LatLng(33.450701, 126.570667),
-			level: 3
-		};
-		
-		var map = new kakao.maps.Map(container, options);
-	</script>
-</body>
+  <body>
+    <div class="s002">
+      <form>
+        <fieldset>
+          <legend>여기에 차리슈&nbsp;<i class="fa-solid fa-location-dot"></i></legend>
+        </fieldset>
+        <div class="inner-form">
+          <div class="input-field fouth-wrap">
+            <select data-trigger="" name="choices-single-defaul">
+              <option placeholder="">서울특별시</option>
+              <option>부산광역시</option>
+              <option>대구광역시</option>
+              <option>인천광역시</option>
+            </select>
+          </div>
+          <div class="input-field fouth-wrap">
+            <select data-trigger="" name="choices-single-defaul">
+              <option placeholder="">강남구</option>
+              <option>강동구</option>
+              <option>강북구</option>
+              <option>강서구</option>
+              <option>관악구</option>
+              <option>광진구</option>
+              <option>구로구</option>
+              <option>금천구</option>
+              <option>노원구</option>
+              <option>도봉구</option>
+              <option>동대문구</option>
+              <option>동작구</option>
+              <option>마포구</option>
+              <option>서대문구</option>
+              <option>서초구</option>
+              <option>성동구</option>
+              <option>성북구</option>
+              <option>송파구</option>
+              <option>양천구</option>
+              <option>영등포구</option>
+              <option>용산구</option>
+              <option>은평구</option>
+              <option>종로구</option>
+              <option>중구</option>
+              <option>중랑구</option>
+            </select>
+          </div>
+          <div class="input-field fouth-wrap">
+            <select data-trigger="" name="choices-single-defaul">
+              <option placeholder="">-- 전체 --</option>
+              <option>일반음식점영업</option>
+              <option>휴게음식점영업</option>
+              <option>단란주점영업</option>
+            </select>
+          </div>
+          <div class="input-field fifth-wrap">
+            <button class="btn-search" type="button">SEARCH</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="js/extention/choices.js"></script>
+    <script src="js/extention/flatpickr.js"></script>
+    <script>
+      flatpickr(".datepicker",
+      {});
+
+    </script>
+    <script>
+      const choices = new Choices('[data-trigger]',
+      {
+        searchEnabled: false,
+        itemSelectText: '',
+      });
+
+    </script>
+  </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>
