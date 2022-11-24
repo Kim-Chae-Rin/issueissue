@@ -1,2 +1,1 @@
-
-
+const API_KEY = config.keys;
