@@ -1521,7 +1521,7 @@ span.flatpickr-weekday {
   -ms-flex-align: center;
       align-items: center;
   font-family: 'Poppins', sans-serif;
-  background: url("../css/img/test.jpg")  ;
+  background: linear-gradient(#89ABE3, #F2DDDE)  ;
   background-size: cover;
   background-position: center center;
   padding: 15px;
