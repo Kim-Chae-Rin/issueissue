@@ -14,7 +14,7 @@
         function submit2(frm) { 
             var gu = document.getElementById("select_gu");
             var text = gu.options[document.getElementById("select_gu").selectedIndex].text;
-            frm.action='./gu/'+text+'.html'; 
+            frm.action= text+'.html'; 
             frm.submit(); 
             return true; 
         } 
