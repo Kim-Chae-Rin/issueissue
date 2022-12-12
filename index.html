@@ -6,75 +6,165 @@
     <meta name="author" content="colorlib.com">
     <title>Main Page</title>
     <script src="https://kit.fontawesome.com/97f7d9edcc.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" />
+    <script src="js/main.js"></script>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500" rel="stylesheet" /> -->
     <link href="css/main.css" rel="stylesheet" />
+    <script> 
+        function submit2(frm) { 
+            var gu = document.getElementById("select_gu");
+            var text = gu.options[document.getElementById("select_gu").selectedIndex].text;
+            frm.action='./gu/'+text+'.html'; 
+            frm.submit(); 
+            return true; 
+        } 
+      </script> 
   </head>
 
   <body>
     <div class="s002">
-      <form>
+      <form method="post">
         <fieldset>
           <legend>여기에 차리슈&nbsp;<i class="fa-solid fa-location-dot"></i></legend>
         </fieldset>
         <div class="inner-form">
           <div class="input-field fouth-wrap">
-            <select data-trigger="" name="choices-single-defaul">
-              <option placeholder="">서울특별시</option>
-              <option>부산광역시</option>
-              <option>대구광역시</option>
-              <option>인천광역시</option>
-            </select>
+          <select data-trigger="" name="choices-single-defaul">
+            <option>서울특별시</option>
+          </select>
           </div>
           <div class="input-field fouth-wrap">
-            <select data-trigger="" name="choices-single-defaul">
-              <option placeholder="">강남구</option>
-              <option>강동구</option>
-              <option>강북구</option>
-              <option>강서구</option>
-              <option>관악구</option>
-              <option>광진구</option>
-              <option>구로구</option>
-              <option>금천구</option>
-              <option>노원구</option>
-              <option>도봉구</option>
-              <option>동대문구</option>
-              <option>동작구</option>
-              <option>마포구</option>
-              <option>서대문구</option>
-              <option>서초구</option>
-              <option>성동구</option>
-              <option>성북구</option>
-              <option>송파구</option>
-              <option>양천구</option>
-              <option>영등포구</option>
-              <option>용산구</option>
-              <option>은평구</option>
-              <option>종로구</option>
-              <option>중구</option>
-              <option>중랑구</option>
-            </select>
+          <select data-trigger="" name="choices-single-gu" id="select_gu">
+            <option placeholder="">--구--</option>
+            <option>강남구</option>
+            <option>강동구</option>
+            <option>강북구</option>
+            <option>강서구</option>
+            <option>관악구</option>
+            <option>광진구</option>
+            <option>구로구</option>
+            <option>금천구</option>
+            <option>노원구</option>
+            <option>도봉구</option>
+            <option>동대문구</option>
+            <option>동작구</option>
+            <option>마포구</option>
+            <option>서대문구</option>
+            <option>서초구</option>
+            <option>성동구</option>
+            <option>성북구</option>
+            <option>송파구</option>
+            <option>양천구</option>
+            <option>영등포구</option>
+            <option>용산구</option>
+            <option>은평구</option>
+            <option>종로구</option>
+            <option>중구</option>
+            <option>중랑구</option>
+          </select>
           </div>
           <div class="input-field fouth-wrap">
-            <select data-trigger="" name="choices-single-defaul">
-              <option placeholder="">-- 전체 --</option>
-              <option>일반음식점영업</option>
-              <option>휴게음식점영업</option>
-              <option>단란주점영업</option>
-            </select>
+          <select data-trigger="" name="choices-single-defaul">
+            <option placeholder="">--업종--</option>
+            <option>분식전문점</option>
+            <option>양식음식점</option>
+            <option>일식음식점</option>
+            <option>제과점</option>
+            <option>중식음식점</option>
+            <option>치킨전문점</option>
+            <option>커피.음료</option>
+            <option>패스트푸드점</option>
+            <option>한식음식점</option>
+            <option>호프.간이주점</option>
+            <option>슈퍼마켓</option>
+            <option>편의점</option>
+          </select>
           </div>
           <div class="input-field fifth-wrap">
-            <button class="btn-search" type="button" onclick="location.href='map.html';">SEARCH</button>
-          </div>
+          <!-- <button class="btn-search" type="button" onclick="location.href='gwanak.html';">Search</button> -->
+          <input type='button' value='선택' onclick='return submit2(this.form);'>  
+        </div>
         </div>
       </form>
+
+      <!-- modal -->
+     <div style="position :absolute; right:20px; bottom:10px;">
+      <button type="button" class="openBtn" id="img_btn"><img src="./css/img/data.png" style="width:40px;height:40px;"></button>
+      <div class="modal hidden">
+        <div class="bg"></div>
+        <div class="modalBox">
+          <h3>데이터 출처</h3>
+          <p>1. 서울 생활이동 인구 - 서울 열린데이터 광장</p>
+          <p>2. 서울시 주차장(동별) 통계 - 서울 열린데이터 광장</p>
+          <p>3. 서울시 버스정류소 위치 정보 - 서울 열린데이터 광장</p>
+          <p>4. 서울시 버스노선별 정류장 승하차 인원 정보 - 서울 열린데이터 광장</p>
+          <p>5. 서울시 지하철호선별 역별 승하차 인원 정보 - 서울 열린 데이터 광장</p>
+          <p><a href='https://observablehq.com/@taekie/seoul_subway_station_coordinate' target="_blank">6. 서울 지하철 좌표</a></p>
+          <p>7. 서울시 주요 공원현황 - 서울 열린데이터 광장</p>
+          <p>8. 서울시 대학 및 전문대학 DB 정보 - 서울 열린데이터 광장</p>
+          <p>9. 서울시 주요 공원현황 - 서울 열린데이터 광장</p>
+          <p>10. 서울시 문화공간 정보 - 서울 열린데이터 광장</p>
+          <p>11. 서울시 구/동명 - KaKao API</p>
+          <button class="closeBtn">✖</button>
+        </div>
+      </div>
     </div>
+    <script>
+      const open = () => {
+        document.querySelector(".modal").classList.remove("hidden");
+      }
+      const close = () => {
+        document.querySelector(".modal").classList.add("hidden");
+      }
+      document.querySelector(".openBtn").addEventListener("click", open);
+      document.querySelector(".closeBtn").addEventListener("click", close);
+      document.querySelector(".bg").addEventListener("click", close);
+    </script>
+    
+
+    <!-- modal2 -->
+    <div style="position :absolute; right:70px; bottom:10px;">
+      <button type="button" class="openBtn2" id="img_btn"><img src="./css/img/guide.png" style="width:40px;height:40px;"></button>
+      <div class="modal2 hidden">
+        <div class="bg2"></div>
+        <div class="modalBox2">
+          <h2>사용가이드</h2>
+          <p><img src="./css/img/그림1.png" style="width:950px;height:500px;"></p>
+          <p>내용</p>
+          <hr>
+          <p><img src="./css/img/그림3.png" style="width:950px;height:500px;"></p>
+          <p>내용</p>
+          <hr>
+          <p><img src="./css/img/그림2.png" style="width:950px;height:500px;"></p>
+          <p>내용</p>
+          <button class="closeBtn2">✖</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const open2 = () => {
+        document.querySelector(".modal2").classList.remove("hidden");
+      }
+      const close2 = () => {
+        document.querySelector(".modal2").classList.add("hidden");
+      }
+      document.querySelector(".openBtn2").addEventListener("click", open2);
+      document.querySelector(".closeBtn2").addEventListener("click", close2);
+      document.querySelector(".bg2").addEventListener("click", close2);
+    </script>
+
+    </div>
+    
+
     <script src="js/extention/choices.js"></script>
     <script src="js/extention/flatpickr.js"></script>
+    
     <script>
       flatpickr(".datepicker",
       {});
-
     </script>
+
     <script>
       const choices = new Choices('[data-trigger]',
       {
@@ -84,4 +174,5 @@
 
     </script>
   </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
 </html>
