@@ -1533,12 +1533,13 @@ span.flatpickr-weekday {
 }
 
 .s002 form legend {
-  font-size: 60px;
+  font-size: 80px;
   line-height: 1;
-  color: #000;
+  color: #1a1a1a;
   margin-bottom: 60px;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
+  font-family: 'GmarketSans';
 }
 
 .s002 form .inner-form {
@@ -1722,7 +1723,7 @@ span.flatpickr-weekday {
 .s002 form .inner-form .input-field.fifth-wrap .btn-search {
   height: 70px;
   width: 100%;
-  background: #b78a62;
+  background: rgb(52, 130, 255);
   white-space: nowrap;
   border-radius: .5px;
   font-size: 20px;
@@ -1735,7 +1736,7 @@ span.flatpickr-weekday {
 }
 
 .s002 form .inner-form .input-field.fifth-wrap .btn-search:hover {
-  background: #af7d51;
+  background: rgb(52, 130, 255);
 }
 
 @media screen and (max-width: 992px) {
